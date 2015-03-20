@@ -1,14 +1,22 @@
 1. Wyczyścić zawartość rejestrów R0 i R1 wpisując do nich wartość 0,
 2. Wyczyścić zawartość komórki pamięci o adresie 14 wpisując do niej wartość 0,
-3. Do rejestru R0 wpisać liczbę 0x6
+3. Do rejestru R0 wpisać liczbę 0x7
 4. Dodać do rejestru R0 wartość przechowywaną w pamięci RAM pod adresem 13,
 5. Umieścić zawartość rejestru R0 w pamięci RAM w komórce o adresie 14,
 6. Zapętlić wykonywanie programu.
-1001 0000 90
-1000 0000 80
-1110 1110 EE
-1000 0110 86
-1101 1101 DD
-0010 0000 20
+1001 0000 90 -zerowanie R0
+1000 0000 80 -zerowanie R1
+1110 1110 EE -czyscimy 14 w pamieci
+1000 0111 87 -zapisujemy do R0 7
+1101 1101 DD -zapisujemy do do R1 zawartosc 13
+0010 0000 20 -dodajemy do R0 R1
 1110 1110 EE
 0000 0000 00
+
+Mnozenie i dodawanie:
+1001 0001 91
+1000 0010 82
+0011 0000 30 - dodawanie
+0111 0000 70 - mnozenie
+0000 0000 00
+
